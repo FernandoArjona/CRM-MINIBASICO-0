@@ -1,0 +1,89 @@
+﻿<Page x:Class="CRM_MINIBASICO.Leads"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CRM_MINIBASICO"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Leads">
+
+	<Grid Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="10*"/>
+		</Grid.RowDefinitions>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="10*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<TextBlock Text="Leads" FontSize="20" FontWeight="Bold" Grid.Column="0"/>
+			<Button Content="GUARDAR" Click="AddLead_Click" Grid.Column="2"/>
+		</Grid>
+
+		<StackPanel Grid.Row="1" Visibility="Visible">
+			<Button Content="REGRESAR"/>
+			<TextBlock Text="Nombre:"/>
+			<TextBox x:Name="Leads_name" IsReadOnly="False"/>
+			<TextBlock Text="Correo:"/>
+			<TextBox x:Name="Leads_email" IsReadOnly="False"/>
+			<TextBlock Text="Número de telefono:"/>
+			<TextBox x:Name="Leads_phone" IsReadOnly="False"/>
+			<TextBlock Text="Nota:"/>
+			<TextBox x:Name="Leads_note" IsReadOnly="False"/>
+			<TextBlock Text="Mover a Cliente:"/>
+			<Button Content="HACER CLIENTE"/>
+		</StackPanel>
+
+		<Grid Grid.Row="1" Visibility="Hidden">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="10*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<TextBlock	Text="lead1" x:Name="lead1"		Grid.Column="0" Grid.Row="0" Background="LightGray"/>
+			<TextBlock	Text="lead2" x:Name="lead2"		Grid.Column="0" Grid.Row="1" Background="White"/>
+			<TextBlock	Text="lead3" x:Name="lead3"		Grid.Column="0" Grid.Row="2" Background="LightGray"/>
+			<TextBlock	Text="lead4" x:Name="lead4"		Grid.Column="0" Grid.Row="3" Background="White"/>
+			<TextBlock	Text="lead5" x:Name="lead5"		Grid.Column="0" Grid.Row="4" Background="LightGray"/>
+			<TextBlock	Text="lead6" x:Name="lead6"		Grid.Column="0" Grid.Row="5" Background="White"/>
+			<TextBlock	Text="lead7" x:Name="lead7"		Grid.Column="0" Grid.Row="6" Background="LightGray"/>
+			<TextBlock	Text="lead8" x:Name="lead8"		Grid.Column="0" Grid.Row="7" Background="White"/>
+			<TextBlock	Text="lead9" x:Name="lead9"		Grid.Column="0" Grid.Row="8" Background="LightGray"/>
+			<TextBlock	Text="lead10" x:Name="lead10"	Grid.Column="0" Grid.Row="9" Background="White"/>
+
+			<StackPanel Orientation="Horizontal" Grid.Row="10" Height="20" Margin="25, 0, 0, 0">
+				<Button Content="←"/>
+				<TextBlock x:Name="page_number" Text="X - Z de 100"/>
+				<Button Content="→"/>
+			</StackPanel>
+
+			<Button	Content="VER" x:Name="lead1_button"		Grid.Column="1" Grid.Row="0"/>
+			<Button	Content="VER" x:Name="lead2_button"		Grid.Column="1" Grid.Row="1"/>
+			<Button	Content="VER" x:Name="lead3_button"		Grid.Column="1" Grid.Row="2"/>
+			<Button	Content="VER" x:Name="lead4_button"		Grid.Column="1" Grid.Row="3"/>
+			<Button	Content="VER" x:Name="lead5_button"		Grid.Column="1" Grid.Row="4"/>
+			<Button	Content="VER" x:Name="lead6_button"		Grid.Column="1" Grid.Row="5"/>
+			<Button	Content="VER" x:Name="lead7_button"		Grid.Column="1" Grid.Row="6"/>
+			<Button	Content="VER" x:Name="lead8_button"		Grid.Column="1" Grid.Row="7"/>
+			<Button	Content="VER" x:Name="lead9_button"		Grid.Column="1" Grid.Row="8"/>
+			<Button	Content="VER" x:Name="lead20_button"	Grid.Column="1" Grid.Row="9"/>
+		</Grid>
+	</Grid>
+
+</Page>

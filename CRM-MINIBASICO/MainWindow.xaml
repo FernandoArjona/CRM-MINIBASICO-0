@@ -1,0 +1,40 @@
+﻿<Window x:Class="CRM_MINIBASICO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRM_MINIBASICO"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="10*"/>
+		</Grid.RowDefinitions>
+		<Grid Grid.Row="0" Background="AliceBlue">
+			<TextBlock Text="CRM MINIBASICO" FontSize="25" FontWeight="Bold"/>
+		</Grid>
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="5*"/>
+			</Grid.ColumnDefinitions>
+			<StackPanel Grid.Column="0" Margin="5">
+				<Button Height="20" Content="Leads"					Click="Leads_Click"					/>
+				<Button Height="20" Content="Clientes"				Click="Clientes_Click"				/>
+				<Button Height="20" Content="Catalogo"				Click="Catalogo_Click"				/>
+				<Button Height="20" Content="Citas"					Click="Citas_Click"					/>
+				<Button Height="20" Content="Calendario"			Click="Calendario_Click"			/>
+				<Button Height="20" Content="Cotizaciones"			Click="Cotizaciones_Click"			/>
+				<Button Height="20" Content="Tickets de soporte"	Click="Tickets_Soporte_Click"		/>
+				<Button Height="20" Content="Actividades"			Click="Actividades_Click"			/>
+				<Button Height="20" Content="Historial Movimientos"	Click="Historial_Movimientos_Click" />
+			</StackPanel>
+
+			<Grid Grid.Column="1" Margin="10">
+				<Frame x:Name="Main_Page"/>
+			</Grid>
+		</Grid>
+	</Grid>
+
+</Window>

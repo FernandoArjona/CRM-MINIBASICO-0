@@ -1,0 +1,102 @@
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.exe
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.deps.json
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.runtimeconfig.json
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.runtimeconfig.dev.json
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.pdb
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\EntityFramework.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\System.Data.SQLite.EF6.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.csproj.AssemblyReference.cache
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\App.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO_MarkupCompile.cache
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO_MarkupCompile.lref
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.g.resources
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.AssemblyInfoInputs.cache
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.AssemblyInfo.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.csproj.CoreCompileInputs.cache
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.csproj.CopyComplete
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.dll
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.pdb
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.genruntimeconfig.cache
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Actividades.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Calendario.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Catalogo.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Citas.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Clientes.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Cotizacion.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Leads.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\TicketSoporte.g.cs
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Actividades.baml
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Calendario.baml
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Catalogo.baml
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Citas.baml
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Clientes.baml
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Cotizacion.baml
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Leads.baml
+D:\GITHUB\CRM-MINIBASICO-1\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\TicketSoporte.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.exe
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.deps.json
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.runtimeconfig.json
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.runtimeconfig.dev.json
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\CRM MINIBASICO.pdb
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\EntityFramework.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\System.Data.SQLite.EF6.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.csproj.AssemblyReference.cache
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Actividades.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Calendario.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Catalogo.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Citas.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Clientes.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Cotizacion.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Leads.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\TicketSoporte.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\App.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO_MarkupCompile.cache
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO_MarkupCompile.lref
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Actividades.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Calendario.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Catalogo.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Citas.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Clientes.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Cotizacion.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Leads.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\TicketSoporte.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.g.resources
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.AssemblyInfoInputs.cache
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.AssemblyInfo.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.csproj.CoreCompileInputs.cache
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.csproj.CopyComplete
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.dll
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.pdb
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\CRM MINIBASICO.genruntimeconfig.cache
