@@ -20,11 +20,11 @@
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 			<TextBlock Text="Leads" FontSize="20" FontWeight="Bold" Grid.Column="0"/>
-			<Button Content="GUARDAR" Click="AddLead_Click" Grid.Column="2"/>
+			<Button Content="VER TODOS" Grid.Column="1"/>
+			<Button Content="AGREGAR NUEVO" Grid.Column="2"/>
 		</Grid>
 
 		<StackPanel Grid.Row="1" Visibility="Visible">
-			<Button Content="REGRESAR"/>
 			<TextBlock Text="Nombre:"/>
 			<TextBox x:Name="Leads_name" IsReadOnly="False"/>
 			<TextBlock Text="Correo:"/>
@@ -33,6 +33,8 @@
 			<TextBox x:Name="Leads_phone" IsReadOnly="False"/>
 			<TextBlock Text="Nota:"/>
 			<TextBox x:Name="Leads_note" IsReadOnly="False"/>
+			<TextBlock Text="Guardar:"/>
+			<Button Content="GUARDAR" Click="AddLead_Click"/>
 			<TextBlock Text="Mover a Cliente:"/>
 			<Button Content="HACER CLIENTE"/>
 		</StackPanel>
