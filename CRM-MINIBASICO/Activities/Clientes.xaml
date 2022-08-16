@@ -27,16 +27,21 @@
 		<StackPanel Grid.Row="1" Visibility="Visible">
 			<StackPanel Orientation="Horizontal">
 				<Button Content="AUTOGENERAR MATRICULA"/>
-				<TextBox x:Name="matricula"		Width="500"/>
+				<TextBox x:Name="clientes_matricula"		Width="500"/>
 			</StackPanel>
 			<TextBlock Text="Nombre:"/>
-			<TextBox x:Name="clientes_name" />
+			<TextBox x:Name="clientes_nombre" />
 			<TextBlock Text="Correo:"/>
 			<TextBox x:Name="clientes_email" />
-			<TextBlock Text="Número de telefono:"/>
-			<TextBox x:Name="clientes_phone"/>
+			<TextBlock Text="Número de telefono:" x:Name="clientes_telefono_block"/>
+			<TextBox x:Name="clientes_telefono"/>
 			<TextBlock Text="Nota:"/>
-			<TextBox x:Name="clientes_note" />
+			<TextBox x:Name="clientes_nota" />
+			<StackPanel x:Name="clientes_zonaAdvertencias"  Margin="20" Visibility="Hidden" >
+				<TextBlock Text="Advertencias:"/>
+				<TextBox x:Name="clientes_advertencias" Text="" Background="AliceBlue" Height="100" TextWrapping="Wrap"/>
+				<Button x:Name="IgnoreWarnings" Click="IgnoreWarnings_Click" Content="Ignorar advertencias menores"/>
+			</StackPanel>
 		</StackPanel>
 
 		<Grid Grid.Row="1" Visibility="Hidden">

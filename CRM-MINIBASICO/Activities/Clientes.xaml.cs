@@ -18,11 +18,14 @@ namespace CRM_MINIBASICO
     /// </summary>
     public partial class Clientes : Page
     {
-        string field0;
-        string field1;
-        string field2;
-        string field3;
-        string field4;
+        string matricula;
+        string nombre;
+        string email;
+        string telefono;
+        string nota;
+        int warningLevel = 0;
+        bool ignoreWarnings = false;
+        bool dataIntegrity;
 
         SQLiteCommander commander = new SQLiteCommander();
         public Clientes()
@@ -30,19 +33,115 @@ namespace CRM_MINIBASICO
             InitializeComponent();
         }
 
-        private void RefreshFields()
+        private bool FieldsAreCorrect()
         {
-            field0 = this.matricula.Text;
-            field1 = this.clientes_name.Text;
-            field2 = this.clientes_email.Text;
-            field3 = this.clientes_phone.Text;
-            field4 = this.clientes_note.Text;
+            //Fields: MATRICULA
+            matricula = this.clientes_matricula.Text;
+            if (string.IsNullOrEmpty(matricula))
+            {
+                dataIntegrity = false;
+                IssueWarning("El campo de matricula no puede esar vacio", 3);
+            }
+            string queryText = "SELECT * FROM CLIENTES WHERE MATRICULA =" + matricula;
+            /*
+             * TO-DO: FIX THIS
+             * List<string> identicalIssues = commander.ReadCommand(queryText, "matricula");
+            if (identicalIssues.Count > 0)
+            {
+                IssueWarning("La base de datos ya tiene una matricula nombrada " + matricula + ". Favor de cambiar esta matricula por una nueva.", 3);
+            }*/
+
+            //Fields: TELEFONO
+            telefono = this.clientes_telefono.Text;
+            if (!CheckIfNumeric(telefono) && (ignoreWarnings == false))
+            {
+                this.clientes_telefono_block.FontWeight = FontWeights.Bold;
+                this.clientes_telefono_block.Background = Brushes.Red;
+                IssueWarning("El campo de telefono debe de estar vacio o solo tener numeros", 2);
+            }
+
+            //Fields: NOMBRE, EMAIL, & NOTA
+            nombre = this.clientes_nombre.Text;
+            email = this.clientes_email.Text;
+            nota = this.clientes_nota.Text;
+
+
+            //Check if warnings can be ignored
+            if ((warningLevel <= 2) && (ignoreWarnings == true))
+                dataIntegrity = true;
+
+            return dataIntegrity;
         }
+
+
+        private bool CheckIfNumeric(string text)
+        {
+            return double.TryParse(text, out _) || (text == string.Empty);
+        }
+
+        private void IssueWarning(string warning, int level)
+        {
+            this.clientes_zonaAdvertencias.Visibility = Visibility.Visible;
+            if (level > warningLevel)
+                warningLevel = level;
+
+            switch (level)
+            {
+                case 1:
+                    {
+                        if (level >= warningLevel)
+                            this.clientes_advertencias.Background = Brushes.Gray;
+                        this.clientes_advertencias.Text += "\n [Notificación:]" + warning;
+                        break;
+                    }
+                case 2:
+                    {
+                        if ((level >= warningLevel)&&(ignoreWarnings == false))
+                        {
+                            this.clientes_advertencias.Background = Brushes.Yellow;
+                            this.clientes_advertencias.Text += "\n [Advertencia nivel 2:]" + warning;
+                            dataIntegrity = false;
+                        }
+                        break;
+                    }
+                case 3:
+                    {
+                        if (level >= warningLevel)
+                            this.clientes_advertencias.Background = Brushes.Red;
+                        this.clientes_advertencias.Text += "\n [Advertencia nivel 3:]" + warning + "(No se pueden ignorar advertencias de nivel 3)";
+                        dataIntegrity = false;
+                        break;
+                    }
+                default:
+                    {
+                        this.clientes_advertencias.Background = Brushes.Purple;
+                        this.clientes_advertencias.Text += "\n [Advertencia nivel 4:]" + warning + "De alguna forma, haz entrado a un nivel de advertencia que no deberia de ser posible. Contacta al autor del proyecto.";
+                        dataIntegrity = false;
+                        break;
+                    }
+            }
+        }
+
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            RefreshFields();
-            commander.Command($"INSERT OR IGNORE INTO CLIENTES VALUES ('{field0}', '{field1}', '{field2}', '{field3}', '{field4}')");
+            warningLevel = 0;
+            dataIntegrity = true;
+            this.clientes_advertencias.Text = "";
+            this.clientes_zonaAdvertencias.Background = Brushes.White;
+            this.clientes_zonaAdvertencias.Visibility = Visibility.Hidden;
+            if (FieldsAreCorrect())
+            {
+                commander.WriteCommand($"INSERT OR IGNORE INTO CLIENTES VALUES ('{matricula}', '{nombre}', '{email}', '{telefono}', '{nota}')");
+                IssueWarning("Se han guardado los campos exitosamente", 1);
+            }
+        }
+
+        private void IgnoreWarnings_Click(object sender, RoutedEventArgs e)
+        {
+            if (warningLevel < 3)
+                this.clientes_zonaAdvertencias.Visibility = Visibility.Hidden;
+            ignoreWarnings = true;
         }
     }
 }

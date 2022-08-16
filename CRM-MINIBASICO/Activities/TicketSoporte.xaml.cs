@@ -39,7 +39,7 @@ namespace CRM_MINIBASICO
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             RefreshFields();
-            commander.Command($"INSERT OR IGNORE INTO TICKETSOPORTE VALUES ('{field1}', '{field2}', '{field3}', '{field4}')");
+            commander.WriteCommand($"INSERT OR IGNORE INTO TICKETSOPORTE VALUES ('{field1}', '{field2}', '{field3}', '{field4}')");
         }
     }
 }

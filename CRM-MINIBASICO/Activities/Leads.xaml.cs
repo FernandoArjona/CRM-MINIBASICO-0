@@ -42,7 +42,7 @@ namespace CRM_MINIBASICO
         private void AddLead_Click(object sender, RoutedEventArgs e)
         {
             RefreshFields();
-            commander.Command($"INSERT OR IGNORE INTO LEADS VALUES ('{name}', '{email}', '{phone}', '{note}')");
+            commander.WriteCommand($"INSERT OR IGNORE INTO LEADS VALUES ('{name}', '{email}', '{phone}', '{note}')");
         }
     }
 }

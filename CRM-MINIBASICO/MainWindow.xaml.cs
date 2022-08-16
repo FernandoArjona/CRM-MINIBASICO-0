@@ -32,6 +32,9 @@ namespace CRM_MINIBASICO
         -Code optimization
 
         TESTING FOR GITHUB VERSION MANAGEMENT
+=======
+        -Fix SQLitecommander reading function
+>>>>>>> Stashed changes
          */
         public MainWindow()
         {
