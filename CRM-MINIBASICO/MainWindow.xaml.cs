@@ -30,6 +30,7 @@ namespace CRM_MINIBASICO
         -Special data entries (adding content to ComboBoxes from the DB, check-uncheck system for the TicketSoporte activity)
         -Design the work for the next patch, with the objective of bringing readability features.
         -Code optimization
+<<<<<<< Updated upstream
 
         TESTING FOR GITHUB VERSION MANAGEMENT
 =======
