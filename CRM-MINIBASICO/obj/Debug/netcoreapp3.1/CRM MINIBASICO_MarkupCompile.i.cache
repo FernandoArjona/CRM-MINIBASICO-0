@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\App.xaml
-9-648961002
+10-1128253078
 
-14-1676260775
+15-1574004046
 197-990204353
-Activities\Actividades.xaml;Activities\Calendario.xaml;Activities\Catalogo.xaml;Activities\Citas.xaml;Activities\Clientes.xaml;Activities\Cotizacion.xaml;Activities\Leads.xaml;Activities\TicketSoporte.xaml;MainWindow.xaml;
+Activities\Calendario.xaml;Activities\Catalogo.xaml;Activities\Clientes.xaml;Activities\Orden.xaml;Activities\Shelved\Actividades.xaml;Activities\Shelved\Citas.xaml;Activities\Shelved\Cotizacion.xaml;Activities\Shelved\Leads.xaml;Activities\Shelved\TicketSoporte.xaml;MainWindow.xaml;
 
-True
+False
 

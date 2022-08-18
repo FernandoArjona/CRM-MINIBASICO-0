@@ -20,15 +20,15 @@
 				<ColumnDefinition Width="5*"/>
 			</Grid.ColumnDefinitions>
 			<StackPanel Grid.Column="0" Margin="5">
-				<Button Height="20" Content="Leads"					Click="Leads_Click"					/>
-				<Button Height="20" Content="Clientes"				Click="Clientes_Click"				/>
-				<Button Height="20" Content="Catalogo"				Click="Catalogo_Click"				/>
-				<Button Height="20" Content="Citas"					Click="Citas_Click"					/>
-				<Button Height="20" Content="Calendario"			Click="Calendario_Click"			/>
-				<Button Height="20" Content="Cotizaciones"			Click="Cotizaciones_Click"			/>
-				<Button Height="20" Content="Tickets de soporte"	Click="Tickets_Soporte_Click"		/>
-				<Button Height="20" Content="Actividades"			Click="Actividades_Click"			/>
-				<Button Height="20" Content="Historial Movimientos"	Click="Historial_Movimientos_Click" />
+				<!-- Button Height="20" Content="Leads"					Click="Leads_Click"	-->
+				<Button Height="20" Content="Clientes"					Click="Clientes_Click"				/>
+				<Button Height="20" Content="Catalogo"					Click="Catalogo_Click"				/>
+				<!-- Button Height="20" Content="Citas"					Click="Citas_Click"					-->
+				<Button Height="20" Content="Calendario"				Click="Calendario_Click"			/>
+				<Button Height="20" Content="Ordenes"					Click="Orden_Click"			/>
+				<!-- Button Height="20" Content="Tickets de soporte"	Click="Tickets_Soporte_Click"		-->
+				<!-- Button Height="20" Content="Actividades"			Click="Actividades_Click"			-->
+				<!-- Button Height="20" Content="Historial Movimientos"	Click="Historial_Movimientos_Click" -->
 			</StackPanel>
 
 			<Grid Grid.Column="1" Margin="10">

@@ -7,7 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Activities\Actividades.xaml.cs">
+    <Compile Update="Activities\Orden.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Activities\Shelved\Actividades.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Activities\Calendario.xaml.cs">
@@ -16,24 +19,27 @@
     <Compile Update="Activities\Catalogo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Activities\Citas.xaml.cs">
+    <Compile Update="Activities\Shelved\Citas.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Activities\Clientes.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Activities\Cotizacion.xaml.cs">
+    <Compile Update="Activities\Shelved\Cotizacion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Activities\Leads.xaml.cs">
+    <Compile Update="Activities\Shelved\Leads.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Activities\TicketSoporte.xaml.cs">
+    <Compile Update="Activities\Shelved\TicketSoporte.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Activities\Actividades.xaml">
+    <Page Update="Activities\Orden.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Activities\Shelved\Actividades.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Activities\Calendario.xaml">
@@ -42,22 +48,22 @@
     <Page Update="Activities\Catalogo.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Activities\Citas.xaml">
+    <Page Update="Activities\Shelved\Citas.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Activities\Clientes.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Activities\Cotizacion.xaml">
+    <Page Update="Activities\Shelved\Cotizacion.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Activities\Leads.xaml">
+    <Page Update="Activities\Shelved\Leads.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Activities\TicketSoporte.xaml">
+    <Page Update="Activities\Shelved\TicketSoporte.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -35,20 +35,20 @@ namespace CRM_MINIBASICO
             return ($"SQLite version: {version}");
         }*/
 
-        public List<string> ReadCommand(string queryText, string querySearch)
+        public List<string> ReadCommand(string queryText, string queryTarget)
         {
             List<string> results = new List<string>();
             using var connection = new SQLiteConnection(databasePath);
             connection.Open();
-            using (SQLiteCommand command = connection.CreateCommand())
+            SQLiteCommand command = connection.CreateCommand();
+            command.CommandText = queryText;
+            SQLiteDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
             {
-                
-                command.CommandText = queryText;
-                //command.CommandType = CommandType.Text;
-                SQLiteDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    results.Add(Convert.ToString(reader[querySearch]));
+                    string cliente = (string)reader[queryTarget];
+                    results.Add(cliente);
                 }
             }
             connection.Close();

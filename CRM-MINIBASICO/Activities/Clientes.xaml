@@ -20,11 +20,11 @@
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 			<TextBlock Text="CLIENTES" FontSize="20" FontWeight="Bold" Grid.Column="0"/>
-			<Button Content="VER TODOS" Grid.Column="1"/>
+			<Button Content="VER TODOS" Click="Button_Click" Grid.Column="1"/>
 			<Button Content="AGREGAR" Click="Add_Click" Grid.Column="2"/>
 		</Grid>
 
-		<StackPanel Grid.Row="1" Visibility="Visible">
+		<StackPanel x:Name="MainContentGrid" Grid.Row="1" Visibility="Visible">
 			<StackPanel Orientation="Horizontal">
 				<Button Content="AUTOGENERAR MATRICULA"/>
 				<TextBox x:Name="clientes_matricula"		Width="500"/>
@@ -44,7 +44,7 @@
 			</StackPanel>
 		</StackPanel>
 
-		<Grid Grid.Row="1" Visibility="Hidden">
+		<Grid x:Name="CollectionTableGrid" Grid.Row="1" Visibility="Hidden">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="10*"/>
 				<ColumnDefinition Width="*"/>
@@ -63,16 +63,16 @@
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
 
-			<TextBlock	Text="cliente1" x:Name="cliente1"		Grid.Column="0" Grid.Row="0" Background="LightGray"/>
-			<TextBlock	Text="cliente2" x:Name="cliente2"		Grid.Column="0" Grid.Row="1" Background="White"/>
-			<TextBlock	Text="cliente3" x:Name="cliente3"		Grid.Column="0" Grid.Row="2" Background="LightGray"/>
-			<TextBlock	Text="cliente4" x:Name="cliente4"		Grid.Column="0" Grid.Row="3" Background="White"/>
-			<TextBlock	Text="cliente5" x:Name="cliente5"		Grid.Column="0" Grid.Row="4" Background="LightGray"/>
-			<TextBlock	Text="cliente6" x:Name="cliente6"		Grid.Column="0" Grid.Row="5" Background="White"/>
-			<TextBlock	Text="cliente7" x:Name="cliente7"		Grid.Column="0" Grid.Row="6" Background="LightGray"/>
-			<TextBlock	Text="cliente8" x:Name="cliente8"		Grid.Column="0" Grid.Row="7" Background="White"/>
-			<TextBlock	Text="cliente9" x:Name="cliente9"		Grid.Column="0" Grid.Row="8" Background="LightGray"/>
-			<TextBlock	Text="cliente10" x:Name="cliente10"	Grid.Column="0" Grid.Row="9" Background="White"/>
+			<TextBlock	Text="entry1"	x:Name="contentEntry_1"		Grid.Column="0" Grid.Row="0" Background="LightGray"/>
+			<TextBlock	Text="entry2"	x:Name="contentEntry_2"		Grid.Column="0" Grid.Row="1" Background="White"/>
+			<TextBlock	Text="entry3"	x:Name="contentEntry_3"		Grid.Column="0" Grid.Row="2" Background="LightGray"/>
+			<TextBlock	Text="entry4"	x:Name="contentEntry_4"		Grid.Column="0" Grid.Row="3" Background="White"/>
+			<TextBlock	Text="entry5"	x:Name="contentEntry_5"		Grid.Column="0" Grid.Row="4" Background="LightGray"/>
+			<TextBlock	Text="entry6"	x:Name="contentEntry_6"		Grid.Column="0" Grid.Row="5" Background="White"/>
+			<TextBlock	Text="entry7"	x:Name="contentEntry_7"		Grid.Column="0" Grid.Row="6" Background="LightGray"/>
+			<TextBlock	Text="entry8"	x:Name="contentEntry_8"		Grid.Column="0" Grid.Row="7" Background="White"/>
+			<TextBlock	Text="entry9"	x:Name="contentEntry_9"		Grid.Column="0" Grid.Row="8" Background="LightGray"/>
+			<TextBlock	Text="entry10"	x:Name="contentEntry_10"	Grid.Column="0" Grid.Row="9" Background="White"/>
 
 			<StackPanel Orientation="Horizontal" Grid.Row="10" Height="20" Margin="25, 0, 0, 0">
 				<Button Content="←"/>
@@ -80,16 +80,16 @@
 				<Button Content="→"/>
 			</StackPanel>
 
-			<Button	Content="VER" x:Name="cliente1_button"		Grid.Column="1" Grid.Row="0"/>
-			<Button	Content="VER" x:Name="cliente2_button"		Grid.Column="1" Grid.Row="1"/>
-			<Button	Content="VER" x:Name="cliente3_button"		Grid.Column="1" Grid.Row="2"/>
-			<Button	Content="VER" x:Name="cliente4_button"		Grid.Column="1" Grid.Row="3"/>
-			<Button	Content="VER" x:Name="cliente5_button"		Grid.Column="1" Grid.Row="4"/>
-			<Button	Content="VER" x:Name="cliente6_button"		Grid.Column="1" Grid.Row="5"/>
-			<Button	Content="VER" x:Name="cliente7_button"		Grid.Column="1" Grid.Row="6"/>
-			<Button	Content="VER" x:Name="cliente8_button"		Grid.Column="1" Grid.Row="7"/>
-			<Button	Content="VER" x:Name="cliente9_button"		Grid.Column="1" Grid.Row="8"/>
-			<Button	Content="VER" x:Name="cliente20_button"		Grid.Column="1" Grid.Row="9"/>
+			<Button x:Name="btn_view1"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="0"/>
+			<Button x:Name="btn_view2"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="1"/>
+			<Button x:Name="btn_view3"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="2"/>
+			<Button x:Name="btn_view4"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="3"/>
+			<Button x:Name="btn_view5"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="4"/>
+			<Button x:Name="btn_view6"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="5"/>
+			<Button x:Name="btn_view7"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="6"/>
+			<Button x:Name="btn_view8"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="7"/>
+			<Button x:Name="btn_view9"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="8"/>
+			<Button x:Name="btn_view10"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="9"/>
 		</Grid>
 	</Grid>
 

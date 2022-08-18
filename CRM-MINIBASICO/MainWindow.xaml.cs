@@ -76,12 +76,24 @@ namespace CRM_MINIBASICO
             this.Main_Page.Content = new Calendario();
             this.Main_Page.NavigationUIVisibility = NavigationUIVisibility.Hidden;
         }
+        
+
+        private void Orden_Click(object sender, RoutedEventArgs e)
+        {
+            this.Main_Page.Content = new Activities.Orden();
+            this.Main_Page.NavigationUIVisibility = NavigationUIVisibility.Hidden;
+        }
+
+
+
+        #region shelved
+        /*
         private void Cotizaciones_Click(object sender, RoutedEventArgs e)
         {
             this.Main_Page.Content = new Cotizacion();
             this.Main_Page.NavigationUIVisibility = NavigationUIVisibility.Hidden;
         }
-        private void Tickets_Soporte_Click(object sender, RoutedEventArgs e)
+         private void Tickets_Soporte_Click(object sender, RoutedEventArgs e)
         {
             this.Main_Page.Content = new TicketSoporte();
             this.Main_Page.NavigationUIVisibility = NavigationUIVisibility.Hidden;
@@ -94,7 +106,8 @@ namespace CRM_MINIBASICO
         private void Historial_Movimientos_Click(object sender, RoutedEventArgs e)
         {
         }
-
+         */
+        #endregion
 
     }
 }
