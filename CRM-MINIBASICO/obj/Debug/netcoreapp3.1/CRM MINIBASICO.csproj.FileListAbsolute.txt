@@ -102,3 +102,5 @@ D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Shelv
 D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Shelved\Cotizacion.baml
 D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Shelved\Leads.baml
 D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Shelved\TicketSoporte.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Welcome.g.cs
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Welcome.baml

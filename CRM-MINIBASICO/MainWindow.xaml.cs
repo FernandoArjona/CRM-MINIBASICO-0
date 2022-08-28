@@ -41,6 +41,8 @@ namespace CRM_MINIBASICO
         {
             InitializeComponent();
             SQLiteCommander commander = new SQLiteCommander();
+            this.Main_Page.Content = new Activities.Welcome();
+            this.Main_Page.NavigationUIVisibility = NavigationUIVisibility.Hidden;
             /*
             commander.Command("CREATE TABLE IF NOT EXISTS CLIENTES (MATRICULA TEXT PRIMARY KEY, NOMBRE TEXT, EMAIL TEXT, TELEFONO TEXT, NOTA TEXT);");
             commander.Command("CREATE TABLE IF NOT EXISTS CITAS (TITULO TEXT, ASISTENTES TEXT, FECHA TEXT, DESCRIPCION TEXT);");
@@ -84,7 +86,11 @@ namespace CRM_MINIBASICO
             this.Main_Page.NavigationUIVisibility = NavigationUIVisibility.Hidden;
         }
 
-
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Main_Page.Content = new Activities.Welcome();
+            this.Main_Page.NavigationUIVisibility = NavigationUIVisibility.Hidden;
+        }
 
         #region shelved
         /*
@@ -108,6 +114,7 @@ namespace CRM_MINIBASICO
         }
          */
         #endregion
+
 
     }
 }

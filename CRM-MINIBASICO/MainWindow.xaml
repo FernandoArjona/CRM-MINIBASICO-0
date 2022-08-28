@@ -5,27 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRM_MINIBASICO"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="750" Width="1000">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="10*"/>
 		</Grid.RowDefinitions>
 		<Grid Grid.Row="0" Background="AliceBlue">
-			<TextBlock Text="CRM MINIBASICO" FontSize="25" FontWeight="Bold"/>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="150"/>
+				<ColumnDefinition Width="127*"/>
+				<ColumnDefinition Width="13*"/>
+			</Grid.ColumnDefinitions>
+			<Button Margin="5" Content="Home" Width="100" Grid.Column="0" Name="HomeButton" Click="HomeButton_Click"/>
+			<TextBlock Text="CRM MINIBASICO" FontSize="25" FontWeight="Bold" Grid.Column="1" Grid.ColumnSpan="2"/>
 		</Grid>
 		<Grid Grid.Row="1">
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="150"/>
 				<ColumnDefinition Width="5*"/>
 			</Grid.ColumnDefinitions>
 			<StackPanel Grid.Column="0" Margin="5">
 				<!-- Button Height="20" Content="Leads"					Click="Leads_Click"	-->
-				<Button Height="20" Content="Clientes"					Click="Clientes_Click"				/>
-				<Button Height="20" Content="Catalogo"					Click="Catalogo_Click"				/>
+				<Button Height="50" Content="Clientes"					Click="Clientes_Click"				/>
+				<Button Height="50" Content="Catalogo"					Click="Catalogo_Click"				/>
 				<!-- Button Height="20" Content="Citas"					Click="Citas_Click"					-->
-				<Button Height="20" Content="Calendario"				Click="Calendario_Click"			/>
-				<Button Height="20" Content="Ordenes"					Click="Orden_Click"			/>
+				<Button Height="50" Content="Calendario"				Click="Calendario_Click"			/>
+				<Button Height="50" Content="Ordenes"					Click="Orden_Click"			/>
 				<!-- Button Height="20" Content="Tickets de soporte"	Click="Tickets_Soporte_Click"		-->
 				<!-- Button Height="20" Content="Actividades"			Click="Actividades_Click"			-->
 				<!-- Button Height="20" Content="Historial Movimientos"	Click="Historial_Movimientos_Click" -->

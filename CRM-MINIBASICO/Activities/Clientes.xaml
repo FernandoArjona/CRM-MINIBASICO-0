@@ -18,25 +18,30 @@
 				<ColumnDefinition Width="10*"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+
 			</Grid.ColumnDefinitions>
 			<TextBlock Text="CLIENTES" FontSize="20" FontWeight="Bold" Grid.Column="0"/>
-			<Button Content="VER TODOS" Click="Button_Click" Grid.Column="1"/>
+			<Button Content="LISTA" Click="ToggleView_Click" Grid.Column="1"/>
 			<Button Content="AGREGAR" Click="Add_Click" Grid.Column="2"/>
+			<Button Content="BORRAR" Click="Delete_Click" Grid.Column="3"/>
 		</Grid>
 
 		<StackPanel x:Name="MainContentGrid" Grid.Row="1" Visibility="Visible">
+			<TextBlock Text="Nombre:"/>
+			<TextBox x:Name="clientes_nombre" />
+			
 			<StackPanel Orientation="Horizontal">
 				<Button Content="AUTOGENERAR MATRICULA"/>
 				<TextBox x:Name="clientes_matricula"		Width="500"/>
 			</StackPanel>
-			<TextBlock Text="Nombre:"/>
-			<TextBox x:Name="clientes_nombre" />
+			
 			<TextBlock Text="Correo:"/>
 			<TextBox x:Name="clientes_email" />
 			<TextBlock Text="Número de telefono:" x:Name="clientes_telefono_block"/>
 			<TextBox x:Name="clientes_telefono"/>
 			<TextBlock Text="Nota:"/>
-			<TextBox x:Name="clientes_nota" />
+			<TextBox x:Name="clientes_nota" Height="200"/>
 			<StackPanel x:Name="clientes_zonaAdvertencias"  Margin="20" Visibility="Hidden" >
 				<TextBlock Text="Advertencias:"/>
 				<TextBox x:Name="clientes_advertencias" Text="" Background="AliceBlue" Height="100" TextWrapping="Wrap"/>
@@ -75,9 +80,9 @@
 			<TextBlock	Text="entry10"	x:Name="contentEntry_10"	Grid.Column="0" Grid.Row="9" Background="White"/>
 
 			<StackPanel Orientation="Horizontal" Grid.Row="10" Height="20" Margin="25, 0, 0, 0">
-				<Button Content="←"/>
+				<Button Content="←" Name="LeftArrow" Click="LeftArrow_Click"/>
 				<TextBlock x:Name="page_number" Text="X - Z de 100"/>
-				<Button Content="→"/>
+				<Button Content="→" Name="RightArrow" Click="RightArrow_Click"/>
 			</StackPanel>
 
 			<Button x:Name="btn_view1"	Click="btn_view_Click"	Content="VER" Grid.Column="1" Grid.Row="0"/>

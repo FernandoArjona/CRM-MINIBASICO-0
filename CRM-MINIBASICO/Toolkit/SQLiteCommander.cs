@@ -8,7 +8,8 @@ namespace CRM_MINIBASICO
 {
     class SQLiteCommander
     {
-        private string databasePath = @"URI=file:D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\crmDataBase.sqli";
+        //private string databasePath = @"URI=file:D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\crmDataBase.sqli";
+          private string databasePath = @"URI=file:D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\crmDataBase.sqli";
         public void WriteCommand(string queryText)
         {
             //https://zetcode.com/csharp/sqlite/

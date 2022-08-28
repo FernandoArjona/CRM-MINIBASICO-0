@@ -23,12 +23,14 @@ namespace CRM_MINIBASICO
         string email;
         string telefono;
         string nota;
+        int page = 0;
 
         SQLiteCommander commander = new SQLiteCommander();
         public Clientes()
         {
             InitializeComponent();
             setContentCollectionTable();
+            page = 0;
         }
 
         #region data integrity
@@ -235,11 +237,11 @@ namespace CRM_MINIBASICO
             List<string> clientes_telefonos     = commander.ReadCommand(query, "TELEFONO");
             List<string> clientes_notas         = commander.ReadCommand(query, "NOTA");
 
-            this.clientes_matricula.Text    = clientes_matriculas[buttonClicked];
-            this.clientes_nombre.Text       = clientes_nombres[buttonClicked];
-            this.clientes_email.Text        = clientes_emails[buttonClicked];
-            this.clientes_telefono.Text     = clientes_telefonos[buttonClicked];
-            this.clientes_nota.Text         = clientes_notas[buttonClicked];
+            this.clientes_matricula.Text    = clientes_matriculas[buttonClicked + (page*10)];
+            this.clientes_nombre.Text       = clientes_nombres[buttonClicked + (page * 10)];
+            this.clientes_email.Text        = clientes_emails[buttonClicked + (page * 10)];
+            this.clientes_telefono.Text     = clientes_telefonos[buttonClicked + (page * 10)];
+            this.clientes_nota.Text         = clientes_notas[buttonClicked + (page * 10)];
             /*
             this.clientes_matricula.Text    = clientes_matriculas[buttonClicked];
             this.clientes_nombre.Text       = clientes_nombres[buttonClicked];
@@ -248,38 +250,59 @@ namespace CRM_MINIBASICO
             this.clientes_nota.Text         = clientes_notas[buttonClicked];*/
         }
 
-        int contentCount = 0;
         private void setContentCollectionTable()
         {
             string query = "SELECT * FROM CLIENTES";
             SQLiteCommander commander = new SQLiteCommander();
             List<string> clientes = commander.ReadCommand(query, "NOMBRE");
-            
+            int contentCount = page*10;
+
             if (clientes.Count >= contentCount + 1)
-                contentEntry_1.Text = clientes[0];
+                contentEntry_1.Text = clientes[contentCount + 0];
+            else
+                contentEntry_1.Text = "";
             if (clientes.Count >= contentCount + 2)
-                contentEntry_2.Text = clientes[1];
+                contentEntry_2.Text = clientes[contentCount + 1];
+            else
+                contentEntry_2.Text = "";
             if (clientes.Count >= contentCount + 3)
-                contentEntry_3.Text = clientes[2];
+                contentEntry_3.Text = clientes[contentCount + 2];
+            else
+                contentEntry_3.Text = "";
             if (clientes.Count >= contentCount + 4)
-                contentEntry_4.Text = clientes[3];
+                contentEntry_4.Text = clientes[contentCount + 3];
+            else
+                contentEntry_4.Text = "";
             if (clientes.Count >= contentCount + 5)
-                contentEntry_5.Text = clientes[4];
+                contentEntry_5.Text = clientes[contentCount + 4];
+            else
+                contentEntry_5.Text = "";
             if (clientes.Count >= contentCount + 6)
-                contentEntry_6.Text = clientes[5];
+                contentEntry_6.Text = clientes[contentCount + 5];
+            else
+                contentEntry_6.Text = "";
             if (clientes.Count >= contentCount + 7)
-                contentEntry_7.Text = clientes[6];
+                contentEntry_7.Text = clientes[contentCount + 6];
+            else
+                contentEntry_7.Text = "";
             if (clientes.Count >= contentCount + 8)
-                contentEntry_8.Text = clientes[7];
+                contentEntry_8.Text = clientes[contentCount + 7];
+            else
+                contentEntry_8.Text = "";
             if (clientes.Count >= contentCount + 9)
-                contentEntry_9.Text = clientes[8];
+                contentEntry_9.Text = clientes[contentCount + 8];
+            else
+                contentEntry_9.Text = "";
             if (clientes.Count >= contentCount + 10)
-                contentEntry_10.Text = clientes[9];
+                contentEntry_10.Text = clientes[contentCount + 9];
+            else
+                contentEntry_10.Text = "";
 
-
+            string page_number_text = (contentCount + 1) + " a " + (contentCount + 10);
+            this.page_number.Text = page_number_text;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ToggleView_Click(object sender, RoutedEventArgs e)
         {
             if (this.MainContentGrid.Visibility == Visibility.Visible)
             {
@@ -290,6 +313,47 @@ namespace CRM_MINIBASICO
             {
                 this.MainContentGrid.Visibility = Visibility.Visible;
                 this.CollectionTableGrid.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void LeftArrow_Click(object sender, RoutedEventArgs e)
+        {
+            if ((page - 1) >= 0)
+            {
+                page--;
+                setContentCollectionTable();
+            }
+            
+        }
+
+        private void RightArrow_Click(object sender, RoutedEventArgs e)
+        {
+            string query = "SELECT * FROM CLIENTES";
+            SQLiteCommander commander = new SQLiteCommander();
+            List<string> clientes = commander.ReadCommand(query, "NOMBRE");
+            int pageCap = (page + 1) * 10;
+            if (clientes.Count >= pageCap)
+            {
+                page++;
+                setContentCollectionTable();
+            }
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            IssueWarning("Estas a punto de borrar este articulo. Ignora advertencias y vuelve a intentar si quieres proseguir.", 2);
+            if (ignoreWarnings == true)
+            {
+                string query = "DELETE FROM CLIENTES WHERE MATRICULA = '" + this.clientes_matricula.Text + "'";
+                SQLiteCommander commander = new SQLiteCommander();
+                commander.WriteCommand(query);
+                this.clientes_matricula.Text = "";
+                this.clientes_nombre.Text = "";
+                this.clientes_nota.Text = "";
+                this.clientes_telefono.Text = "";
+                this.clientes_advertencias.Text = "";
+                IssueWarning("Articulo borrado exitosamente.", 1);
+                setContentCollectionTable();
             }
         }
     }
