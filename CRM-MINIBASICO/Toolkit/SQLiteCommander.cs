@@ -22,23 +22,29 @@ namespace CRM_MINIBASICO
             connection.Close();
         }
 
-        /*
-        public string ReadCommand(string queryText)
-        {
-            using var connection = new SQLiteConnection(databasePath);
-            connection.Open();
-
-            using var command = new SQLiteCommand(queryText, connection);
-            using SQLiteDataReader reader = command.ExecuteReader();
-
-            connection.Close();
-
-            return ($"SQLite version: {version}");
-        }*/
-
         public List<string> ReadCommand(string queryText, string queryTarget)
         {
             List<string> results = new List<string>();
+            using var connection = new SQLiteConnection(databasePath);
+            connection.Open();
+            SQLiteCommand command = connection.CreateCommand();
+            command.CommandText = queryText;
+                SQLiteDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string cliente = (string)reader[queryTarget];
+                        results.Add(cliente);
+                    }
+                }
+            connection.Close();
+            return results;
+        }
+
+        public List<int> ReadCommandInt(string queryText, string queryTarget)
+        {
+            List<int> results = new List<int>();
             using var connection = new SQLiteConnection(databasePath);
             connection.Open();
             SQLiteCommand command = connection.CreateCommand();
@@ -48,8 +54,51 @@ namespace CRM_MINIBASICO
             {
                 while (reader.Read())
                 {
-                    string cliente = (string)reader[queryTarget];
-                    results.Add(cliente);
+                    //object cliente = reader[queryTarget];
+                    //int intVal = (int)cliente;
+                    int val = (int)reader[queryTarget];
+                    results.Add(val);
+                }
+            }
+            connection.Close();
+            return results;
+        }
+
+        public List<double> ReadCommandDouble(string queryText, string queryTarget)
+        {
+            List<double> results = new List<double>();
+            using var connection = new SQLiteConnection(databasePath);
+            connection.Open();
+            SQLiteCommand command = connection.CreateCommand();
+            command.CommandText = queryText;
+            SQLiteDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    double val = (double)reader[queryTarget];
+                    results.Add(val);
+                }
+            }
+            connection.Close();
+            return results;
+        }
+
+        public List<DateTime> ReadCommandDate(string queryText, string queryTarget)
+        {
+            List<DateTime> results = new List<DateTime>();
+            using var connection = new SQLiteConnection(databasePath);
+            connection.Open();
+            SQLiteCommand command = connection.CreateCommand();
+            command.CommandText = queryText;
+            SQLiteDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    string Test2 = (string)reader[queryTarget];
+                    var val = DateTime.ParseExact(Test2, "dd/MM/yyyy hh:mm:ss", null);
+                    results.Add(val);
                 }
             }
             connection.Close();
