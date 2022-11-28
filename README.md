@@ -31,3 +31,6 @@ Al navegar a uno de los formularios, se pueden agregar articulos a partir del bo
 Adicionalmente, se pueden ver los campos ya almacenados por medio del botón de LISTA, y se pueden realizar busquedas de datos almacenados a partir de diferentes campos.
 
 ![alt text](https://github.com/FernandoArjona/CRM-MINIBASICO-0/blob/demo/readme/img7.png?raw=true)
+
+**CONSIDERACIONES**
+El software actual es uno aún uno en desarrollo, con mayores funcionalidades planeadas al igual que mejor estabilidad. Por el momento, se debe de considerar tan solo como un proyecto escolar abierto al publico, y no como un producto empresarial.
