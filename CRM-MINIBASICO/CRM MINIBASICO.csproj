@@ -24,9 +24,6 @@
     <None Update="crmDataBase.sqli">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Toolkit\crmDataBase.sqli">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
