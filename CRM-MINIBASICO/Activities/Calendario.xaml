@@ -28,41 +28,105 @@
 		<!-- TODO: IMPLEMENT DATEPICKER :https://www.youtube.com/watch?v=NOop2rC4fN8 -->
 		<StackPanel Grid.Row="1" Margin="15">
 			<StackPanel Orientation="Horizontal">
-				<Calendar Margin="5">
+				<StackPanel Orientation="Horizontal">
 
-				</Calendar>
+					<TextBlock Text="Mes"/>
+					<ComboBox x:Name="comboBox_mes" Width="100" SelectionChanged="Date_SelectionChanged">
+						<ComboBoxItem Content="Enero"/>
+						<ComboBoxItem Content="Febrero"/>
+						<ComboBoxItem Content="Marzo"/>
+						<ComboBoxItem Content="Abril"/>
+						<ComboBoxItem Content="Mayo"/>
+						<ComboBoxItem Content="Junio"/>
+						<ComboBoxItem Content="Julio"/>
+						<ComboBoxItem Content="Agosto"/>
+						<ComboBoxItem Content="Septiembre"/>
+						<ComboBoxItem Content="Octubre"/>
+						<ComboBoxItem Content="Novimbre"/>
+						<ComboBoxItem Content="Diciembre"/>
+					</ComboBox>
+					<TextBlock Text="Año"/>
+					<ComboBox x:Name="comboBox_year" Width="100"  SelectionChanged="Date_SelectionChanged"/>
+				</StackPanel>
 
-				<Calendar Margin="5">
-
-				</Calendar>
-
-				<Calendar Margin="5">
-
-				</Calendar>
 
 			</StackPanel>
-			<StackPanel Orientation="Horizontal">
-				<Calendar Margin="5">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
 
-				</Calendar>
+				<TextBlock Text="Domingo"	Grid.Column="0"/>
+				<TextBlock Text="Lunes"		Grid.Column="1"/>
+				<TextBlock Text="Martes"	Grid.Column="2"/>
+				<TextBlock Text="Miercoles" Grid.Column="3"/>
+				<TextBlock Text="Jueves"	Grid.Column="4"/>
+				<TextBlock Text="Viernes"	Grid.Column="5"/>
+				<TextBlock Text="Sabado"	Grid.Column="6"/>
 
-				<Calendar Margin="5">
+				<Button Grid.Column="0" Grid.Row="1" Height="50" Content="1"	HorizontalContentAlignment="Left" x:Name="dateButton1"/>
+				<Button Grid.Column="1" Grid.Row="1" Height="50" Content="2"	HorizontalContentAlignment="Left" x:Name="dateButton2"/>
+				<Button Grid.Column="2" Grid.Row="1" Height="50" Content="3"	HorizontalContentAlignment="Left" x:Name="dateButton3"/>
+				<Button Grid.Column="3" Grid.Row="1" Height="50" Content="4"	HorizontalContentAlignment="Left" x:Name="dateButton4"/>
+				<Button Grid.Column="4" Grid.Row="1" Height="50" Content="5"	HorizontalContentAlignment="Left" x:Name="dateButton5"/>
+				<Button Grid.Column="5" Grid.Row="1" Height="50" Content="6"	HorizontalContentAlignment="Left" x:Name="dateButton6"/>
+				<Button Grid.Column="6" Grid.Row="1" Height="50" Content="7"	HorizontalContentAlignment="Left" x:Name="dateButton7"/>
 
-				</Calendar>
+				<Button Grid.Column="0" Grid.Row="2" Height="50" Content="8" HorizontalContentAlignment="Left"   x:Name="dateButton8"/>
+				<Button Grid.Column="1" Grid.Row="2" Height="50" Content="9"  HorizontalContentAlignment="Left"  x:Name="dateButton9"/>
+				<Button Grid.Column="2" Grid.Row="2" Height="50" Content="10" HorizontalContentAlignment="Left"  x:Name="dateButton10"/>
+				<Button Grid.Column="3" Grid.Row="2" Height="50" Content="11" HorizontalContentAlignment="Left"  x:Name="dateButton11"/>
+				<Button Grid.Column="4" Grid.Row="2" Height="50" Content="12" HorizontalContentAlignment="Left"  x:Name="dateButton12"/>
+				<Button Grid.Column="5" Grid.Row="2" Height="50" Content="13" HorizontalContentAlignment="Left"  x:Name="dateButton13"/>
+				<Button Grid.Column="6" Grid.Row="2" Height="50" Content="14" HorizontalContentAlignment="Left"  x:Name="dateButton14"/>
 
-				<Calendar Margin="5">
+				<Button Grid.Column="0" Grid.Row="3" Height="50" Content="15" HorizontalContentAlignment="Left"  x:Name="dateButton15"/>
+				<Button Grid.Column="1" Grid.Row="3" Height="50" Content="16" HorizontalContentAlignment="Left"  x:Name="dateButton16"/>
+				<Button Grid.Column="2" Grid.Row="3" Height="50" Content="17" HorizontalContentAlignment="Left"  x:Name="dateButton17"/>
+				<Button Grid.Column="3" Grid.Row="3" Height="50" Content="18" HorizontalContentAlignment="Left"  x:Name="dateButton18"/>
+				<Button Grid.Column="4" Grid.Row="3" Height="50" Content="19" HorizontalContentAlignment="Left"  x:Name="dateButton19"/>
+				<Button Grid.Column="5" Grid.Row="3" Height="50" Content="20" HorizontalContentAlignment="Left"  x:Name="dateButton20"/>
+				<Button Grid.Column="6" Grid.Row="3" Height="50" Content="21" HorizontalContentAlignment="Left"  x:Name="dateButton21"/>
 
-				</Calendar>
+				<Button Grid.Column="0" Grid.Row="4" Height="50" Content="22" HorizontalContentAlignment="Left"  x:Name="dateButton22"/>
+				<Button Grid.Column="1" Grid.Row="4" Height="50" Content="23" HorizontalContentAlignment="Left"  x:Name="dateButton23"/>
+				<Button Grid.Column="2" Grid.Row="4" Height="50" Content="24" HorizontalContentAlignment="Left"  x:Name="dateButton24"/>
+				<Button Grid.Column="3" Grid.Row="4" Height="50" Content="25" HorizontalContentAlignment="Left"  x:Name="dateButton25"/>
+				<Button Grid.Column="4" Grid.Row="4" Height="50" Content="26" HorizontalContentAlignment="Left"  x:Name="dateButton26"/>
+				<Button Grid.Column="5" Grid.Row="4" Height="50" Content="27" HorizontalContentAlignment="Left"  x:Name="dateButton27"/>
+				<Button Grid.Column="6" Grid.Row="4" Height="50" Content="28" HorizontalContentAlignment="Left"  x:Name="dateButton28"/>
 
-			</StackPanel>
+				<Button Grid.Column="0" Grid.Row="5" Height="50" Content="29" HorizontalContentAlignment="Left"  x:Name="dateButton29"/>
+				<Button Grid.Column="1" Grid.Row="5" Height="50" Content="30" HorizontalContentAlignment="Left"  x:Name="dateButton30"/>
+				<Button Grid.Column="2" Grid.Row="5" Height="50" Content="31" HorizontalContentAlignment="Left"  x:Name="dateButton31"/>
+				<Button Grid.Column="3" Grid.Row="5" Height="50" Content="32" HorizontalContentAlignment="Left"  x:Name="dateButton32"/>
+				<Button Grid.Column="4" Grid.Row="5" Height="50" Content="33" HorizontalContentAlignment="Left"  x:Name="dateButton33"/>
+				<Button Grid.Column="5" Grid.Row="5" Height="50" Content="34" HorizontalContentAlignment="Left"  x:Name="dateButton34"/>
+				<Button Grid.Column="6" Grid.Row="5" Height="50" Content="35" HorizontalContentAlignment="Left"  x:Name="dateButton35"/>
 
-
-			<StackPanel Orientation="Horizontal" Grid.Row="10" Height="20" Margin="25, 0, 0, 0">
-				<Button Content="←"/>
-				<TextBlock x:Name="page_number" Text="X - Z de 100"/>
-				<Button Content="→"/>
-			</StackPanel>
-
+				<Button Grid.Column="0" Grid.Row="6" Height="50" Content="36" HorizontalContentAlignment="Left"  x:Name="dateButton36"/>
+				<Button Grid.Column="1" Grid.Row="6" Height="50" Content="37" HorizontalContentAlignment="Left"  x:Name="dateButton37"/>
+				<Button Grid.Column="2" Grid.Row="6" Height="50" Content="38" HorizontalContentAlignment="Left"  x:Name="dateButton38"/>
+				<Button Grid.Column="3" Grid.Row="6" Height="50" Content="39" HorizontalContentAlignment="Left"  x:Name="dateButton39"/>
+				<Button Grid.Column="4" Grid.Row="6" Height="50" Content="40" HorizontalContentAlignment="Left"  x:Name="dateButton40"/>
+				<Button Grid.Column="5" Grid.Row="6" Height="50" Content="41" HorizontalContentAlignment="Left"  x:Name="dateButton41"/>
+				<Button Grid.Column="6" Grid.Row="6" Height="50" Content="42" HorizontalContentAlignment="Left"  x:Name="dateButton42"/>
+			</Grid>
 		</StackPanel>
 	</Grid>
 

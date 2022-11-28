@@ -116,10 +116,15 @@ namespace CRM_MINIBASICO.Activities
             }
         }
 
-        private void Date_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Date_SelectionChanged()
         {
-            
-            int daysInMonth = 31;
+            int month = this.comboBox_mes.SelectedIndex;
+            int year = this.comboBox_year.SelectedIndex;
+
+            month++;
+            year += 2000;
+
+            int daysInMonth = DateTime.DaysInMonth(year, month); ;
 
             this.comboBox_dia.Items.Clear();
             
@@ -132,13 +137,14 @@ namespace CRM_MINIBASICO.Activities
 
         }
 
-        private void Date_SelectionChanged()
+        private void Date_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             this.comboBox_year.SelectedIndex = 0;
             this.comboBox_mes.SelectedIndex = 0;
             this.comboBox_dia.SelectedIndex = 1;
             this.comboBox_hora.SelectedIndex = 0;
             this.comboBox_minutos.SelectedIndex = 0;
+            Date_SelectionChanged();
             //int selectedMonth = this.comboBox_mes.SelectedIndex + 1;
             //int selectedYear = Int32.Parse(this.comboBox_year.SelectedItem.ToString());
             //int daysInMonth = System.DateTime.DaysInMonth(selectedYear, selectedMonth);
@@ -178,7 +184,7 @@ namespace CRM_MINIBASICO.Activities
             {
                 IssueWarning("El campo de matricula no puede esar vacio", 3);
             }
-            string queryText = "SELECT * FROM ORDENES WHERE MATRICULA = " + matricula_;
+            string queryText = $"SELECT * FROM ORDENES WHERE MATRICULA = '{matricula}'";
 
 
             List<string> identicalIssues = commander.ReadCommand(queryText, "matricula");
@@ -833,6 +839,23 @@ namespace CRM_MINIBASICO.Activities
             {
                 setContentCollectionTable();
             }
+        }
+
+        private void autogenerarMatricula_Click(object sender, RoutedEventArgs e)
+        {
+            string letters = "abcdefghijklmnopqrstuvwxy";
+            Random rnd = new Random();
+            int num = rnd.Next(1000, 2000);
+            char[] randomPicks = new char[4];
+            char[] chars = letters.ToCharArray();
+            randomPicks[0] = chars[rnd.Next(0, 23)];
+            randomPicks[1] = chars[rnd.Next(0, 23)];
+            randomPicks[2] = chars[rnd.Next(0, 23)];
+            randomPicks[3] = chars[rnd.Next(0, 23)];
+            string numstring = num.ToString();
+            char[] numChars = numstring.ToCharArray();
+            string id = $"{randomPicks[0]}{numChars[0]}{randomPicks[1]}{numChars[1]}{randomPicks[2]}{numChars[2]}{randomPicks[3]}{numChars[3]}";
+            this.matricula.Text = id;
         }
     }
 }

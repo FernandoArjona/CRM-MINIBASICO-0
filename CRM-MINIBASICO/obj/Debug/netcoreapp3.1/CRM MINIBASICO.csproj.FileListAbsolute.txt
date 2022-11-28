@@ -104,3 +104,5 @@ D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Shelv
 D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Shelved\TicketSoporte.baml
 D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Welcome.g.cs
 D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\obj\Debug\netcoreapp3.1\Activities\Welcome.baml
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\Toolkit\crmDataBase.sqli
+D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\bin\Debug\netcoreapp3.1\crmDataBase.sqli

@@ -88,7 +88,7 @@ namespace CRM_MINIBASICO
                 dataIntegrity = false;
                 IssueWarning("El campo de matricula no puede esar vacio", 3);
             }
-            string queryText = "SELECT * FROM CATALOGO WHERE MATRICULA = " + matricula_;
+            string queryText = $"SELECT * FROM CATALOGO WHERE MATRICULA = '{matricula}'";
 
             List<string> identicalIssues = commander.ReadCommand(queryText, "matricula");
             if ((identicalIssues.Count > 0) && (!updating))
@@ -434,7 +434,7 @@ namespace CRM_MINIBASICO
         {
             string query = "SELECT * FROM CATALOGO";
             SQLiteCommander commander = new SQLiteCommander();
-            List<string> clientes = commander.ReadCommand(query, "NOMBRE");
+            List<string> clientes = commander.ReadCommand(query, "MATRICULA");
             int pageCap = (page + 1) * 10;
             if (clientes.Count >= pageCap)
             {
@@ -478,8 +478,6 @@ namespace CRM_MINIBASICO
 
 
             RefreshFields();
-            //"NOMBRE TEXT, MATRICULA TEXT, DESCRIPCION TEXT, EXISTENCIAS INT, PRECIO_VENTA DOUBLE, PRECIO_COMPRA DOUBLE, DESCUENTO DOUBLE)";
-
             commander.WriteCommand($"UPDATE CATALOGO SET NOMBRE = '{nombre_}', PRECIO_VENTA = {precio_venta_}, PRECIO_COMPRA = {precio_compra_}," +
                 $" DESCUENTO = {descuento_}, DESCRIPCION ='{descripcion_}' WHERE MATRICULA = '{matricula_}'");
             IssueWarning("Se han actualizado los campos exitosamente", 1);
@@ -498,6 +496,23 @@ namespace CRM_MINIBASICO
             {
                 setContentCollectionTable();
             }
+        }
+
+        private void autogenerarMatricula_Click(object sender, RoutedEventArgs e)
+        {
+            string letters = "abcdefghijklmnopqrstuvwxy";
+            Random rnd = new Random();
+            int num = rnd.Next(1000, 2000);
+            char[] randomPicks = new char[4];
+            char[] chars = letters.ToCharArray();
+            randomPicks[0] = chars[rnd.Next(0, 23)];
+            randomPicks[1] = chars[rnd.Next(0, 23)];
+            randomPicks[2] = chars[rnd.Next(0, 23)];
+            randomPicks[3] = chars[rnd.Next(0, 23)];
+            string numstring = num.ToString();
+            char[] numChars = numstring.ToCharArray();
+            string id = $"{randomPicks[0]}{numChars[0]}{randomPicks[1]}{numChars[1]}{randomPicks[2]}{numChars[2]}{randomPicks[3]}{numChars[3]}";
+            this.matricula.Text = id;
         }
     }
 }

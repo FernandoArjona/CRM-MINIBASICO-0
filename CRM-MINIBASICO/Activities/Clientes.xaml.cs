@@ -63,7 +63,7 @@ namespace CRM_MINIBASICO
                 dataIntegrity = false;
                 IssueWarning("El campo de matricula no puede esar vacio", 3);
             }
-            string queryText = "SELECT * FROM CLIENTES WHERE MATRICULA = " + matricula;
+            string queryText = $"SELECT * FROM CLIENTES WHERE MATRICULA = '{matricula}'";
             
             List<string> identicalIssues = commander.ReadCommand(queryText, "matricula");
             if ((identicalIssues.Count > 0)&&(!updating))
@@ -536,6 +536,23 @@ namespace CRM_MINIBASICO
             {
                 setContentCollectionTable();
             }
+        }
+
+        private void AutogenerarMatricula_Click(object sender, RoutedEventArgs e)
+        {
+            string letters = "abcdefghijklmnopqrstuvwxy";
+            Random rnd = new Random();
+            int num = rnd.Next(1000, 2000);
+            char[] randomPicks = new char[4];
+            char[] chars = letters.ToCharArray();
+            randomPicks[0] = chars[rnd.Next(0, 23)];
+            randomPicks[1] = chars[rnd.Next(0, 23)];
+            randomPicks[2] = chars[rnd.Next(0, 23)];
+            randomPicks[3] = chars[rnd.Next(0, 23)];
+            string numstring = num.ToString();
+            char[] numChars = numstring.ToCharArray();
+            string id = $"{randomPicks[0]}{numChars[0]}{randomPicks[1]}{numChars[1]}{randomPicks[2]}{numChars[2]}{randomPicks[3]}{numChars[3]}";
+            this.clientes_matricula.Text = id;
         }
     }
 }

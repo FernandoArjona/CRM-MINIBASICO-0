@@ -5,34 +5,34 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CRM_MINIBASICO"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="850"
+      d:DesignHeight="700" d:DesignWidth="800"
       Title="Clientes">
 
-	<Grid Background="White">
+	<Grid  Background="#BFD7FF">
 		<Grid.RowDefinitions>
+			<RowDefinition Height="50"/>
 			<RowDefinition Height="*"/>
-			<RowDefinition Height="10*"/>
 		</Grid.RowDefinitions>
 		<Grid>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="2*"/>
 				<ColumnDefinition Width="200"/>
+				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
-			<TextBlock Text="CLIENTES" FontSize="20" FontWeight="Bold" Grid.Column="0"/>
-			<StackPanel x:Name="Bar_Menu_Buttons" Visibility="Visible" Orientation="Horizontal" Grid.Column="2">
-				<Button Content="LISTA"			Click="ToggleView_Click"	Width="50"/>
-				<Button Content="AGREGAR"		Click="Add_Click"			Width="50"/>
-				<Button Content="BORRAR"		Click="Delete_Click"		Width="50"/>
-				<Button Content="ACTUALIZAR"	Click="Update_Click"		Width="50"/>
+			<TextBlock Text="CLIENTES" Foreground="White" FontSize="36" FontWeight="Bold" Grid.Column="0"/>
+			<StackPanel x:Name="Bar_Menu_Buttons" Visibility="Visible" Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="3">
+				<Button Content="LISTA"		FontSize="18"	Click="ToggleView_Click" Background="#788BFF"	Width="100"/>
+				<Button Content="AGREGAR"	FontSize="18"	Click="Add_Click"		 Background="#788BFF"	Width="100"/>
+				<Button Content="BORRAR"	FontSize="18"	Click="Delete_Click"	 Background="#788BFF"	Width="100"/>
+				<Button Content="EDITAR"	FontSize="18"	Click="Update_Click"	 Background="#788BFF"	Width="100"/>
 			</StackPanel>
+
 
 			<Grid x:Name="Bar_Menu_List_Options"
 						Grid.Column="1" 
-						Visibility="Hidden" Height="20">
+						Visibility="Hidden" Height="30">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="1.5*"/>
 					<ColumnDefinition Width="1.5*"/>
@@ -40,39 +40,37 @@
 					<ColumnDefinition Width="*"/>
 
 				</Grid.ColumnDefinitions>
-				<ComboBox x:Name="Buscar_ComboBox" Grid.Column="0">
+				<ComboBox x:Name="Buscar_ComboBox" Grid.Column="0" FontSize="16">
 					<ComboBoxItem Content="Buscar por..."/>
 					<ComboBoxItem Content="NOMBRE"/>
 					<ComboBoxItem Content="MATRICULA"/>
-					<ComboBoxItem Content="EMAIL"/>
-					<ComboBoxItem Content="TELEFONO"/>
 				</ComboBox>
 
-				<TextBox x:Name="Buscar_TextBox" Text="Escribe aqui..." Grid.Column="1"/>
-				<Button Content="BUSCAR" Click="Search_Click"  Grid.Column="2" />
-				<Button Content="CREAR NUEVO" Click="ToggleView_Click" Grid.Column="3"/>
+				<TextBox x:Name="Buscar_TextBox" Text="Escribe aqui..." Grid.Column="1" FontSize="16"/>
+				<Button Content="BUSCAR" Click="Search_Click"  Grid.Column="2" FontSize="16"/>
+				<Button Content="CREAR NUEVO" Click="ToggleView_Click" Grid.Column="3" FontSize="16"/>
 			</Grid>
 		</Grid>
-
 		<StackPanel x:Name="MainContentGrid" Grid.Row="1" Visibility="Visible">
-			<TextBlock Text="Nombre:"/>
-			<TextBox x:Name="clientes_nombre" />
-			
-			<StackPanel Orientation="Horizontal">
-				<Button Content="AUTOGENERAR MATRICULA"/>
-				<TextBox x:Name="clientes_matricula"		Width="500"/>
+			<TextBlock Text="Nombre:" FontSize="24"		FontWeight="Bold"/>
+			<TextBox x:Name="clientes_nombre"	FontSize="24"	/>
+
+			<TextBlock Text="Matricula:" FontSize="24"	FontWeight="Bold"/>
+			<StackPanel Orientation="Horizontal" >
+				<Button Content="AUTOGENERAR MATRICULA" Click="AutogenerarMatricula_Click" FontSize="24"/>
+				<TextBox x:Name="clientes_matricula"		Width="500" FontSize="24"/>
 			</StackPanel>
-			
-			<TextBlock Text="Correo:"/>
-			<TextBox x:Name="clientes_email" />
-			<TextBlock Text="Número de telefono:" x:Name="clientes_telefono_block"/>
-			<TextBox x:Name="clientes_telefono"/>
-			<TextBlock Text="Nota:"/>
-			<TextBox x:Name="clientes_nota" Height="100"/>
+
+			<TextBlock Text="Correo:" FontSize="24"	FontWeight="Bold"/>
+			<TextBox x:Name="clientes_email" FontSize="24" />
+			<TextBlock Text="Número de telefono:" x:Name="clientes_telefono_block" FontSize="24"	FontWeight="Bold"/>
+			<TextBox x:Name="clientes_telefono" FontSize="24"/>
+			<TextBlock Text="Nota:" FontSize="24"	FontWeight="Bold"/>
+			<TextBox x:Name="clientes_nota" Height="100" FontSize="24"/>
 			<StackPanel x:Name="clientes_zonaAdvertencias"  Margin="20" Visibility="Visible" >
-				<TextBlock Text="Advertencias:"/>
-				<TextBox x:Name="clientes_advertencias" Text="" Background="AliceBlue" Height="100" TextWrapping="Wrap"/>
-				<Button x:Name="IgnoreWarnings" Click="IgnoreWarnings_Click" Content="Ignorar advertencias menores"/>
+				<TextBlock Text="Advertencias:" FontSize="24"	FontWeight="Bold"/>
+				<TextBox x:Name="clientes_advertencias" Text="" FontSize="24" Background="AliceBlue" Height="100" TextWrapping="Wrap"/>
+				<Button x:Name="IgnoreWarnings" FontSize="24" Click="IgnoreWarnings_Click" Content="Ignorar advertencias menores"/>
 			</StackPanel>
 		</StackPanel>
 
@@ -100,61 +98,58 @@
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
 
-			<TextBlock Text="Nombre"		Grid.Column="0" Grid.Row="0" FontWeight="Bold"/>
-			<TextBlock Text="Matricula"		Grid.Column="1" Grid.Row="0" FontWeight="Bold"/>
-			<TextBlock Text="Correo"		Grid.Column="2" Grid.Row="0" FontWeight="Bold"/>
-			<TextBlock Text="Telefono"		Grid.Column="3" Grid.Row="0" FontWeight="Bold"/>
-			<TextBlock Text="Accion"		Grid.Column="4" Grid.Row="0" FontWeight="Bold"/>
+			<TextBlock Text="Nombre"		FontSize="18" FontWeight="Bold"	Grid.Column="0" Grid.Row="0"/>
+			<TextBlock Text="Matricula"		FontSize="18" Grid.Column="1" Grid.Row="0" FontWeight="Bold"/>
+			<TextBlock Text="Correo"		FontSize="18" Grid.Column="2" Grid.Row="0" FontWeight="Bold"/>
+			<TextBlock Text="Telefono"		FontSize="18" Grid.Column="3" Grid.Row="0" FontWeight="Bold"/>
+			<TextBlock FontSize="18" Grid.Column="4" Grid.Row="0" FontWeight="Bold"/>
 			
 
-			<TextBlock	Text="entry1"	x:Name="contentEntry_1"		Grid.Column="0" Grid.Row="1" Background="LightGray"/>
-			<TextBlock	Text="entry2"	x:Name="contentEntry_2"		Grid.Column="0" Grid.Row="2" Background="White"/>
-			<TextBlock	Text="entry3"	x:Name="contentEntry_3"		Grid.Column="0" Grid.Row="3" Background="LightGray"/>
-			<TextBlock	Text="entry4"	x:Name="contentEntry_4"		Grid.Column="0" Grid.Row="4" Background="White"/>
-			<TextBlock	Text="entry5"	x:Name="contentEntry_5"		Grid.Column="0" Grid.Row="5" Background="LightGray"/>
-			<TextBlock	Text="entry6"	x:Name="contentEntry_6"		Grid.Column="0" Grid.Row="6" Background="White"/>
-			<TextBlock	Text="entry7"	x:Name="contentEntry_7"		Grid.Column="0" Grid.Row="7" Background="LightGray"/>
-			<TextBlock	Text="entry8"	x:Name="contentEntry_8"		Grid.Column="0" Grid.Row="8" Background="White"/>
-			<TextBlock	Text="entry9"	x:Name="contentEntry_9"		Grid.Column="0" Grid.Row="9" Background="LightGray"/>
-			<TextBlock	Text="entry10"	x:Name="contentEntry_10"	Grid.Column="0" Grid.Row="10" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry1"	x:Name="contentEntry_1"		Grid.Column="0" Grid.Row="1" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry2"	x:Name="contentEntry_2"		Grid.Column="0" Grid.Row="2" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry3"	x:Name="contentEntry_3"		Grid.Column="0" Grid.Row="3" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry4"	x:Name="contentEntry_4"		Grid.Column="0" Grid.Row="4" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry5"	x:Name="contentEntry_5"		Grid.Column="0" Grid.Row="5" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry6"	x:Name="contentEntry_6"		Grid.Column="0" Grid.Row="6" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry7"	x:Name="contentEntry_7"		Grid.Column="0" Grid.Row="7" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry8"	x:Name="contentEntry_8"		Grid.Column="0" Grid.Row="8" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry9"	x:Name="contentEntry_9"		Grid.Column="0" Grid.Row="9" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry10"	x:Name="contentEntry_10"	Grid.Column="0" Grid.Row="10" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry1"	x:Name="matriculaEntry_1"	Grid.Column="1" Grid.Row="1" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry2"	x:Name="matriculaEntry_2"	Grid.Column="1" Grid.Row="2" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry3"	x:Name="matriculaEntry_3"	Grid.Column="1" Grid.Row="3" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry4"	x:Name="matriculaEntry_4"	Grid.Column="1" Grid.Row="4" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry5"	x:Name="matriculaEntry_5"	Grid.Column="1" Grid.Row="5" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry6"	x:Name="matriculaEntry_6"	Grid.Column="1" Grid.Row="6" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry7"	x:Name="matriculaEntry_7"	Grid.Column="1" Grid.Row="7" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry8"	x:Name="matriculaEntry_8"	Grid.Column="1" Grid.Row="8" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry9"	x:Name="matriculaEntry_9"	Grid.Column="1" Grid.Row="9" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry10"	x:Name="matriculaEntry_10"	Grid.Column="1" Grid.Row="10" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry1"	x:Name="correoEntry_1"		Grid.Column="2" Grid.Row="1" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry2"	x:Name="correoEntry_2"		Grid.Column="2" Grid.Row="2" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry3"	x:Name="correoEntry_3"		Grid.Column="2" Grid.Row="3" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry4"	x:Name="correoEntry_4"		Grid.Column="2" Grid.Row="4" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry5"	x:Name="correoEntry_5"		Grid.Column="2" Grid.Row="5" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry6"	x:Name="correoEntry_6"		Grid.Column="2" Grid.Row="6" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry7"	x:Name="correoEntry_7"		Grid.Column="2" Grid.Row="7" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry8"	x:Name="correoEntry_8"		Grid.Column="2" Grid.Row="8" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry9"	x:Name="correoEntry_9"		Grid.Column="2" Grid.Row="9" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry10"	x:Name="correoEntry_10"		Grid.Column="2" Grid.Row="10" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry1"	x:Name="telefonoEntry_1"	Grid.Column="3" Grid.Row="1" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry2"	x:Name="telefonoEntry_2"	Grid.Column="3" Grid.Row="2" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry3"	x:Name="telefonoEntry_3"	Grid.Column="3" Grid.Row="3" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry4"	x:Name="telefonoEntry_4"	Grid.Column="3" Grid.Row="4" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry5"	x:Name="telefonoEntry_5"	Grid.Column="3" Grid.Row="5" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry6"	x:Name="telefonoEntry_6"	Grid.Column="3" Grid.Row="6" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry7"	x:Name="telefonoEntry_7"	Grid.Column="3" Grid.Row="7" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry8"	x:Name="telefonoEntry_8"	Grid.Column="3" Grid.Row="8" Background="White"/>
+			<TextBlock  FontSize="18"	Text="entry9"	x:Name="telefonoEntry_9"	Grid.Column="3" Grid.Row="9" Background="LightGray"/>
+			<TextBlock  FontSize="18"	Text="entry10"	x:Name="telefonoEntry_10"	Grid.Column="3" Grid.Row="10" Background="White"/>
 
-			<TextBlock	Text="entry1"	x:Name="matriculaEntry_1"	Grid.Column="1" Grid.Row="1" Background="LightGray"/>
-			<TextBlock	Text="entry2"	x:Name="matriculaEntry_2"	Grid.Column="1" Grid.Row="2" Background="White"/>
-			<TextBlock	Text="entry3"	x:Name="matriculaEntry_3"	Grid.Column="1" Grid.Row="3" Background="LightGray"/>
-			<TextBlock	Text="entry4"	x:Name="matriculaEntry_4"	Grid.Column="1" Grid.Row="4" Background="White"/>
-			<TextBlock	Text="entry5"	x:Name="matriculaEntry_5"	Grid.Column="1" Grid.Row="5" Background="LightGray"/>
-			<TextBlock	Text="entry6"	x:Name="matriculaEntry_6"	Grid.Column="1" Grid.Row="6" Background="White"/>
-			<TextBlock	Text="entry7"	x:Name="matriculaEntry_7"	Grid.Column="1" Grid.Row="7" Background="LightGray"/>
-			<TextBlock	Text="entry8"	x:Name="matriculaEntry_8"	Grid.Column="1" Grid.Row="8" Background="White"/>
-			<TextBlock	Text="entry9"	x:Name="matriculaEntry_9"	Grid.Column="1" Grid.Row="9" Background="LightGray"/>
-			<TextBlock	Text="entry10"	x:Name="matriculaEntry_10"	Grid.Column="1" Grid.Row="10" Background="White"/>
-
-			<TextBlock	Text="entry1"	x:Name="correoEntry_1"		Grid.Column="2" Grid.Row="1" Background="LightGray"/>
-			<TextBlock	Text="entry2"	x:Name="correoEntry_2"		Grid.Column="2" Grid.Row="2" Background="White"/>
-			<TextBlock	Text="entry3"	x:Name="correoEntry_3"		Grid.Column="2" Grid.Row="3" Background="LightGray"/>
-			<TextBlock	Text="entry4"	x:Name="correoEntry_4"		Grid.Column="2" Grid.Row="4" Background="White"/>
-			<TextBlock	Text="entry5"	x:Name="correoEntry_5"		Grid.Column="2" Grid.Row="5" Background="LightGray"/>
-			<TextBlock	Text="entry6"	x:Name="correoEntry_6"		Grid.Column="2" Grid.Row="6" Background="White"/>
-			<TextBlock	Text="entry7"	x:Name="correoEntry_7"		Grid.Column="2" Grid.Row="7" Background="LightGray"/>
-			<TextBlock	Text="entry8"	x:Name="correoEntry_8"		Grid.Column="2" Grid.Row="8" Background="White"/>
-			<TextBlock	Text="entry9"	x:Name="correoEntry_9"		Grid.Column="2" Grid.Row="9" Background="LightGray"/>
-			<TextBlock	Text="entry10"	x:Name="correoEntry_10"		Grid.Column="2" Grid.Row="10" Background="White"/>
-
-			<TextBlock	Text="entry1"	x:Name="telefonoEntry_1"	Grid.Column="3" Grid.Row="1" Background="LightGray"/>
-			<TextBlock	Text="entry2"	x:Name="telefonoEntry_2"	Grid.Column="3" Grid.Row="2" Background="White"/>
-			<TextBlock	Text="entry3"	x:Name="telefonoEntry_3"	Grid.Column="3" Grid.Row="3" Background="LightGray"/>
-			<TextBlock	Text="entry4"	x:Name="telefonoEntry_4"	Grid.Column="3" Grid.Row="4" Background="White"/>
-			<TextBlock	Text="entry5"	x:Name="telefonoEntry_5"	Grid.Column="3" Grid.Row="5" Background="LightGray"/>
-			<TextBlock	Text="entry6"	x:Name="telefonoEntry_6"	Grid.Column="3" Grid.Row="6" Background="White"/>
-			<TextBlock	Text="entry7"	x:Name="telefonoEntry_7"	Grid.Column="3" Grid.Row="7" Background="LightGray"/>
-			<TextBlock	Text="entry8"	x:Name="telefonoEntry_8"	Grid.Column="3" Grid.Row="8" Background="White"/>
-			<TextBlock	Text="entry9"	x:Name="telefonoEntry_9"	Grid.Column="3" Grid.Row="9" Background="LightGray"/>
-			<TextBlock	Text="entry10"	x:Name="telefonoEntry_10"	Grid.Column="3" Grid.Row="10" Background="White"/>
-
-			<StackPanel Orientation="Horizontal" Grid.Row="11" Height="20" Margin="25, 0, 0, 0">
-				<Button Content="←" Name="LeftArrow" Click="LeftArrow_Click"/>
-				<TextBlock x:Name="page_number" Text="X - Z de 100"/>
-				<Button Content="→" Name="RightArrow" Click="RightArrow_Click"/>
+			<StackPanel Orientation="Horizontal" Grid.Row="11" Height="30" Margin="25, 0, 0, 0">
+				<Button Content="←" Name="LeftArrow" Click="LeftArrow_Click" FontSize="18"/>
+				<TextBlock x:Name="page_number" Text="X - Z de 100" FontSize="18"/>
+				<Button Content="→" Name="RightArrow" Click="RightArrow_Click" FontSize="18"/>
 			</StackPanel>
 
 			<Button x:Name="btn_view1"	Click="btn_view_Click"	Content="VER" Grid.Column="4" Grid.Row="1"/>

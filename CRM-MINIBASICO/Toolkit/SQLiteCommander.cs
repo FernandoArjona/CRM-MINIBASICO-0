@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.IO;
 using System.Text;
 
 namespace CRM_MINIBASICO
 {
     class SQLiteCommander
     {
-        //private string databasePath = @"URI=file:D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\crmDataBase.sqli";
-          private string databasePath = @"URI=file:D:\GITHUB\CRM-MINIBASICO\CRM-MINIBASICO\crmDataBase.sqli";
+        private string databasePath = @"URI=file:" + Directory.GetCurrentDirectory() + @"\crmDataBase.sqli";
+
         public void WriteCommand(string queryText)
         {
-            //https://zetcode.com/csharp/sqlite/
             //https://extendsclass.com/sqlite-browser.html
             using var connection = new SQLiteConnection(databasePath);
             using var command = new SQLiteCommand(connection);
@@ -54,8 +54,6 @@ namespace CRM_MINIBASICO
             {
                 while (reader.Read())
                 {
-                    //object cliente = reader[queryTarget];
-                    //int intVal = (int)cliente;
                     int val = (int)reader[queryTarget];
                     results.Add(val);
                 }
