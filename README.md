@@ -17,7 +17,7 @@ La carpeta APP contiene la aplicación lista para usarse. Tan solo se debe de ab
 
 ![alt text](https://github.com/FernandoArjona/CRM-MINIBASICO-0/blob/demo/readme/img4.png?raw=true)
 
-Es posible que se pida descargar .NET Core. Si es este el caso, se puede descargar desde: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+Es posible que se pida descargar .NET Core versión 3.1. Si es este el caso, se puede descargar desde: [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
 
 ![image](https://user-images.githubusercontent.com/62151689/204407129-54cf8417-0267-4d31-818c-120df1a60424.png)
 
